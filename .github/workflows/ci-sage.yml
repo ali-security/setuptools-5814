@@ -62,7 +62,7 @@ env:
 jobs:
 
   dist:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Check out ${{ env.SPKG }}
         uses: actions/checkout@v2
@@ -86,7 +86,7 @@ jobs:
           name: upstream
 
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [dist]
     strategy:
       fail-fast: false
